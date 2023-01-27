@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
 {
-    private bool isDragging;
+    private bool isSelected;
 
         public void OnMouseDown()
         {
-            isDragging = true;
+            isSelected = true;
         }
 
         public void OnMouseUp() 
         {
-            isDragging = false;
+            isSelected = false;
         }
 
         void Update() 
         {
-            if (isDragging)
+            if (isSelected)
             {
                 Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
                 transform.Translate(mousePosition);
