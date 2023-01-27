@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Plant : MonoBehaviour
 {   
-    [SerializeField] float currentHealth = 0f;
-    [SerializeField] float maxHealth = 100f;
+    // [SerializeField] float currentHealth = 0f;
+    // [SerializeField] float maxHealth = 100f;
 
     // Start is called before the first frame update
     void Start()
