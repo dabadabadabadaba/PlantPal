@@ -3,6 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public class Plant : MonoBehaviour
+{
+
+
+	public int currentHealth;
+
+	public HealthBar healthBar;
+
+    void Start()
+    {
+		currentHealth = 0;
+		healthBar.SetHealth(currentHealth);
+    }
+
+	private void OnTriggerEnter2D(Collider2D other) {
+		if (other.tag == "Water") 
+		{
+			AddHealth(5);
+		}
+	}
+
+	void AddHealth(int health)
+	{
+		currentHealth += health;
+		healthBar.SetHealth(currentHealth);
+	}
+}
+
 // public class Plant : MonoBehaviour
 // {
 
@@ -33,32 +61,3 @@ using UnityEngine.UI;
 // 		healthBar.SetHealth(currentHealth);
 // 	}
 // }
-
-public class Plant : MonoBehaviour
-{
-
-
-	public int currentHealth;
-
-	public HealthBar healthBar;
-
-    void Start()
-    {
-		currentHealth = 0;
-		healthBar.SetHealth(currentHealth);
-    }
-
-    void Update()
-    {
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			AddHealth(5);
-		}
-    }
-
-	void AddHealth(int health)
-	{
-		currentHealth += health;
-		healthBar.SetHealth(currentHealth);
-	}
-}
