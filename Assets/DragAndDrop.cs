@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
 {
+    public delegate void DragEndedDelgate(DragAndDrop draggableObject);
+    public DragEndedDelgate dragEndedCallback;
+
     private bool isDragging;
 
         public void OnMouseDown()
@@ -14,6 +17,7 @@ public class DragAndDrop : MonoBehaviour
         public void OnMouseUp() 
         {
             isDragging = false;
+            dragEndedCallback(this);
         }
 
         void Update() 
