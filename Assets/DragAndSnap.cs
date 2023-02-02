@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DragAndDrop : MonoBehaviour
+public class DragAndSnap : MonoBehaviour
 {
-    public delegate void DragEndedDelgate(DragAndDrop draggableObject);
+    public delegate void DragEndedDelgate(DragAndSnap draggableObject);
     public DragEndedDelgate dragEndedCallback;
 
     private bool isDragging;

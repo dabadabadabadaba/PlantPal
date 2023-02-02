@@ -5,18 +5,18 @@ using UnityEngine;
 public class SnapController : MonoBehaviour
 {
     public List<Transform> snapPoints;
-    public List<DragAndDrop> draggableObjects;
-    public float snapRange = 0.4f;
+    public List<DragAndSnap> draggableObjects;
+    public float snapRange = 0.5f;
 
 
     void Start()
     {
-        foreach(DragAndDrop draggable in draggableObjects){
+        foreach(DragAndSnap draggable in draggableObjects){
             draggable.dragEndedCallback = OnDragEnded;
         }
     }
 
-    private void OnDragEnded(DragAndDrop draggable){
+    private void OnDragEnded(DragAndSnap draggable){
         float closestDistance = -1;
         Transform closestSnapPoint = null;
 

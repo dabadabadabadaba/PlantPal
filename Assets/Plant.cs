@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Plant : MonoBehaviour
 {
 
-
 	public int currentHealth;
 
 	public HealthBar healthBar;
