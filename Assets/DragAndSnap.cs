@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Combo of Oxmond and Curious Bits Tutorial
+//JUST Dragging Logic
+
 public class DragAndSnap : MonoBehaviour
 {
     public delegate void DragEndedDelgate(DragAndSnap draggableObject);
@@ -15,7 +18,7 @@ public class DragAndSnap : MonoBehaviour
         }
 
         public void OnMouseUp() 
-        {
+        {   
             isDragging = false;
             dragEndedCallback(this);
         }
