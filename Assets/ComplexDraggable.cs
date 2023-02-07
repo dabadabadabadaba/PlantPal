@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Oxmond Tutorial
-
-public class Draggable : MonoBehaviour
+public class ComplexDraggable : MonoBehaviour
 {
-private bool isDragging;
+    public GameObject Panel;
+    private bool isDragging;
 
         public void OnMouseDown()
         {
@@ -14,9 +13,19 @@ private bool isDragging;
         }
 
         public void OnMouseUp() 
-        {
+        {   Debug.Log("Setting parent to null");
             isDragging = false;
+            transform.SetParent(null);
         }
+
+        private void OnTriggerEnter2D(Collider2D other) 
+        {
+            if (other.tag == "Panel") 
+            {
+                Debug.Log("Add item back to menu");
+                transform.SetParent(Panel.transform);
+            }
+	    }
 
         void Update() 
         {

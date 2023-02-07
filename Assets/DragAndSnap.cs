@@ -2,33 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Combo of Oxmond and Curious Bits Tutorial
-//JUST Dragging Logic
+//attempt at what Harrison suggested
+//should be possible to combine the snap point with reassinging gameObject parents
 
 public class DragAndSnap : MonoBehaviour
 {
-    public delegate void DragEndedDelgate(DragAndSnap draggableObject);
-    public DragEndedDelgate dragEndedCallback;
+	public void OnMouseUp()
+	{
+		//Raycast from mouse point
+		// will return list of game objects
+        //get component 
+        //get snapcomponent 
 
-    private bool isDragging;
+		// var objectsHit = Raycast();
 
-        public void OnMouseDown()
-        {
-            isDragging = true;
-        }
-
-        public void OnMouseUp() 
-        {   
-            isDragging = false;
-            dragEndedCallback(this);
-        }
-
-        void Update() 
-        {
-            if (isDragging)
-            {
-                Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-                transform.Translate(mousePosition);
-            }
-        }
+		// foreach(var obj in objectsHit)
+		// {
+		// 	try
+		// 	{
+		// 		var foundComponent = obj.GetComponent<SnapComponent>();
+		// 		foundComponent.TakeOwnership(this);
+		// 		return;
+		// 	}
+		// 	catch
+		// 	{
+		// 		// no component found
+		// 	}
+		// }
+	}
 }

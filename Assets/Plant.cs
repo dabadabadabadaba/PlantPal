@@ -7,7 +7,6 @@ public class Plant : MonoBehaviour
 {
 
 	public int currentHealth;
-
 	public HealthBar healthBar;
 
     void Start()
@@ -16,10 +15,16 @@ public class Plant : MonoBehaviour
 		healthBar.SetHealth(currentHealth);
     }
 
-	private void OnTriggerEnter2D(Collider2D other) {
+	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Water") 
 		{
 			AddHealth(5);
+		}
+
+		if (other.tag == "Sunlight")
+		{
+			Debug.Log("Sun for plant");
+			AddHealth(2);
 		}
 	}
 

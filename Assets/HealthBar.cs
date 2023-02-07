@@ -7,7 +7,7 @@ public class HealthBar : MonoBehaviour
 {
 
 	public Slider slider;
-
+	// [SerializeField] Slider (component name) slider (name in front of field);
 
 	public void SetHealth(int health)
 	{

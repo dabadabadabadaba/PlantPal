@@ -7,7 +7,7 @@ public class TextWater : MonoBehaviour
 {
     public GameObject UiObject;
     public GameObject Water;
-    // Start is called before the first frame update
+
     void Start()
     {
         UiObject.SetActive(false);
