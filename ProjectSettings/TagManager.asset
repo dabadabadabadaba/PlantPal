@@ -6,9 +6,9 @@ TagManager:
   tags:
   - Water
   - Plant
-  - Undefined
-  - OpenedWinow
   - Sunlight
+  - Panel
+  - SnapPoint
   layers:
   - Default
   - TransparentFX

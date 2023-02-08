@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SnapComponent : MonoBehaviour
 {
-   public void TakeOwnership(DragAndSnap obj) 
+   public void TakeOwnership(ComplexDraggable obj) 
    {
-        obj.transform.parent = transform;
+      obj.transform.parent = transform;
    }
 }
