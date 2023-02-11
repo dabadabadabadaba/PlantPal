@@ -9,6 +9,8 @@ TagManager:
   - Sunlight
   - Panel
   - SnapPoint
+  - BaseballCap
+  - BowTie
   layers:
   - Default
   - TransparentFX

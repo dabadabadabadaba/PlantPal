@@ -26,6 +26,19 @@ public class Plant : MonoBehaviour
 			Debug.Log("Sun for plant");
 			AddHealth(2);
 		}
+
+		if (other.tag == "BaseballCap")
+		{
+			Debug.Log("BaseballCap for plant");
+			AddHealth(7);
+		}
+
+		if (other.tag == "BowTie")
+		{
+			Debug.Log("BowTie for plant");
+			AddHealth(3);
+		}
+
 	}
 
 	void AddHealth(int health)

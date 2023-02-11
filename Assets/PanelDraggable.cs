@@ -5,7 +5,7 @@ using UnityEngine;
 public class PanelDraggable : MonoBehaviour
 {
     public GameObject Panel;
-    public GameObject SnapPoint;
+    public GameObject Plant;
     private bool isDragging;
     public Vector2 startPosition;
 
@@ -13,7 +13,6 @@ public class PanelDraggable : MonoBehaviour
         {
             isDragging = true;
             startPosition = transform.position;
-
             
         }
 
@@ -33,15 +32,17 @@ public class PanelDraggable : MonoBehaviour
                 Debug.Log(foundComponent.tag);
                 Debug.Log(foundComponent.name);
 
-                if (foundComponent.tag == "SnapPoint")
+                if (foundComponent.tag == "Plant")
                 {
-                    Debug.Log("Setting parent to SnapPoint");
+                    Debug.Log("Setting parent to Plant");
                     // transform.SetParent(SnapPoint.transform); //based on object in inspector
+                   
                     //transform.SetParent to found object
                     transform.SetParent(foundComponent.gameObject.transform);
-                    // transform.localPosition = new Vector3(0,0,0);
-                    Debug.Log(SnapPoint.transform.localPosition);
-                    transform.position = foundComponent.gameObject.transform.position;
+
+                    Debug.Log(Plant.transform.localPosition);
+                    //snap feature 
+                    // transform.position = foundComponent.gameObject.transform.position;
 
                 }
 
