@@ -5,13 +5,19 @@ using UnityEngine;
 public class WindowOpener : MonoBehaviour
 {
     public GameObject OpenWindow;
+    public GameObject ClosedWindow;
+
 
     public void OpenCurtain()
     {
         if (OpenWindow != null)
         {
-            bool isActive = OpenWindow.activeSelf;
-            OpenWindow.SetActive(!isActive);
+            bool openActive = OpenWindow.activeSelf;
+            OpenWindow.SetActive(!openActive);
+
+            bool closedActive = ClosedWindow.activeSelf;
+            ClosedWindow.SetActive(!closedActive);
         }
+
     }
 }
