@@ -11,6 +11,10 @@ TagManager:
   - SnapPoint
   - BaseballCap
   - BowTie
+  - SunHat
+  - SantaHat
+  - PartyHat
+  - PirateHat
   layers:
   - Default
   - TransparentFX

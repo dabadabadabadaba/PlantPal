@@ -30,7 +30,7 @@ public class Plant : MonoBehaviour
 		if (other.tag == "BaseballCap")
 		{
 			Debug.Log("BaseballCap for plant");
-			AddHealth(7);
+			AddHealth(5);
 		}
 
 		if (other.tag == "BowTie")
@@ -39,6 +39,29 @@ public class Plant : MonoBehaviour
 			AddHealth(3);
 		}
 
+		if (other.tag == "SunHat")
+		{
+			Debug.Log("SunHat for plant");
+			AddHealth(4);
+		}
+
+		if (other.tag == "SantaHat")
+		{
+			Debug.Log("SantaHat for plant");
+			AddHealth(3);
+		}
+
+		if (other.tag == "PartyHat")
+		{
+			Debug.Log("PartyHat for plant");
+			AddHealth(6);
+		}
+
+		if (other.tag == "PirateHat")
+		{
+			Debug.Log("PirateHat for plant");
+			AddHealth(8);
+		}		
 	}
 
 	void AddHealth(int health)
