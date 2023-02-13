@@ -23,14 +23,14 @@ public class PanelDraggable : MonoBehaviour
             
             Collider2D[] hits;
             hits = Physics2D.OverlapPointAll(transform.position);
-            Debug.Log(hits.Length);
-            Debug.Log(startPosition);
+            // Debug.Log(hits.Length);
+            // Debug.Log(startPosition);
 
             foreach(var obj in hits)
             {
                 Collider2D foundComponent = obj.GetComponent<Collider2D>();
-                Debug.Log(foundComponent.tag);
-                Debug.Log(foundComponent.name);
+                // Debug.Log(foundComponent.tag);
+                // Debug.Log(foundComponent.name);
 
                 if (foundComponent.tag == "Plant")
                 {
@@ -40,7 +40,7 @@ public class PanelDraggable : MonoBehaviour
                     //transform.SetParent to found object
                     transform.SetParent(foundComponent.gameObject.transform);
 
-                    Debug.Log(Plant.transform.localPosition);
+                    // Debug.Log(Plant.transform.localPosition);
                     //snap feature 
                     // transform.position = foundComponent.gameObject.transform.position;
 
